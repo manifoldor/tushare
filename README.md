@@ -1,3 +1,40 @@
+# tushare — China A-share market data plugin for Grok Bot
+
+`tushare` is an Agent Plugins 1.0 / MCP plugin that lets Grok Bot query China A-share stock quotes and 5-level order book, daily/weekly/monthly K-line history, intraday ticks, major indices (SSE, SZSE, ChiNext, CSI 300, STAR 50), stock search by name or code, company profiles, and the trading calendar.
+
+- **Author:** yishan · **Publisher:** manifoldor · **Homepage:** https://sibox.org · **License:** MIT
+
+## Install
+
+```bash
+git clone https://github.com/manifoldor/tushare.git && cd tushare
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+```
+
+The plugin manifest is `.cursor-plugin/plugin.json`; the MCP server is declared in `mcp.json` and started with `python3 run_server.py`.
+
+## Tools
+
+`get_stock_quote`, `get_stock_history`, `get_stock_intraday`, `get_index_quote`, `search_stock`, `get_stock_info`, `get_trade_calendar` (see the table below).
+
+## Tushare token
+
+A [Tushare Pro](https://tushare.pro) token is **recommended but not strictly required**. Set it via the `TUSHARE_TOKEN` environment variable (e.g. in the `env` block of your MCP config) or put it in `~/.tushare_token`. Without a token, Tushare Pro endpoints are unavailable and the plugin falls back to public web quote endpoints (Sina / Tencent) and a bundled seed list, so coverage and reliability are reduced. **Never commit your token to the repository.**
+
+## Data source & attribution
+
+Data comes from [Tushare Pro](https://tushare.pro) via the open-source `tushare` Python package, plus public web quote endpoints as fallback. This plugin is an independent project and is **not affiliated with or endorsed by the Tushare project**.
+
+## Disclaimer
+
+All data is provided for reference only and may be delayed or inaccurate. It is **not investment advice**.
+
+## 中文简介
+
+`tushare` 插件基于 Tushare Pro（https://tushare.pro）查询 A 股行情、盘口、K 线、分时、指数、公司资料和交易日历。建议配置环境变量 `TUSHARE_TOKEN`（或 `~/.tushare_token`），不配也能用部分公开备选接口，但数据不全。本插件为独立项目，与 Tushare 官方无关；数据仅供参考，不构成投资建议。请勿把 Token 提交到仓库。
+
+---
+
 # TuShare A 股行情与金融数据 Grokbot 插件 (tushare)
 
 [![Standard: Agent Plugins 1.0](https://img.shields.io/badge/standard-Agent%20Plugins%201.0-blue.svg)](https://agent-plugins.org)
@@ -35,7 +72,10 @@
 
 ```text
 tushare/
-├── plugin.json                 # Grokbot / Agent Plugins 标准元数据清单
+├── .cursor-plugin/plugin.json  # 插件清单（市场使用）
+├── plugin.json                 # 兼容元数据清单
+├── LICENSE
+├── assets/logo.png             # 插件 Logo
 ├── mcp.json                    # Model Context Protocol 服务注册配置
 ├── mcp_config.json             # 兼容配置
 ├── requirements.txt            # Python 依赖清单
@@ -159,4 +199,4 @@ ln -s /path/to/tushare ~/.grok/plugins/tushare
 
 ## 📄 许可证
 
-本项目基于 [MIT License](LICENSE) 开源。数据来源于 TuShare 金融大数据平台及公开网络财经接口，仅供技术研究与个人参考，不构成任何投资建议。
+本项目基于 [MIT License](LICENSE) 开源。数据来源于 TuShare 金融大数据平台及公开网络财经接口，仅供技术研究与个人参考，不构成任何投资建议。本插件为独立项目，与 TuShare 官方无关。

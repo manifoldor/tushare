@@ -4,7 +4,9 @@
   "displayName": "TuShare A股行情与金融数据查询",
   "version": "1.0.0",
   "description": "基于 TuShare (TuShare Pro) 接口的 A 股股票价格查询、行情分析与上市公司资料 Grokbot 插件，支持 A 股实时股价、五档买卖盘口、历史 K 线、分时走势、大盘指数、公司高管与主营业务、交易日历等查询。",
-  "author": "ethan",
+  "author": {
+    "name": "yishan"
+  },
   "license": "MIT",
   "keywords": [
     "tushare",
@@ -23,5 +25,9 @@
     "获取上证指数、深证成指与创业板指的大盘最新行情",
     "查询中芯国际(688981)的公司基本资料与主营业务",
     "查询本周 A 股交易日历与休市安排"
-  ]
+  ],
+  "publisher": "manifoldor",
+  "homepage": "https://sibox.org",
+  "repository": "https://github.com/manifoldor/tushare",
+  "logo": "assets/logo.png"
 }

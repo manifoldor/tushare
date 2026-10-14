@@ -1,0 +1,27 @@
+{
+  "name": "tushare",
+  "displayName": "TuShare A-share Market Data",
+  "version": "1.0.0",
+  "description": "Query China A-share quotes, order book, K-line history, intraday ticks, major indices, company profiles and trading calendar via Tushare Pro. A Tushare token (TUSHARE_TOKEN) is recommended; some tools fall back to public endpoints without it.",
+  "author": {
+    "name": "yishan"
+  },
+  "keywords": [
+    "tushare",
+    "tushare-pro",
+    "a-share",
+    "stock",
+    "stock-price",
+    "finance",
+    "kline",
+    "china",
+    "mcp"
+  ],
+  "mcpServers": "./mcp.json",
+  "skills": "./skills/",
+  "repository": "https://github.com/manifoldor/tushare",
+  "homepage": "https://sibox.org",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "publisher": "manifoldor"
+}
