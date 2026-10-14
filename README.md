@@ -132,19 +132,9 @@ pip install -r requirements.txt
   ```
 * 或保存在 `~/.tushare_token` 文件中。插件在未配置 Token 时会自动使用原生实时通道与公共数据接口。
 
-### 3. 在 Grokbot / Grok Build 中使用
+### 3. 在 Grok Bot 中使用
 
-#### 方式 A：通过本地插件目录加载
-在运行 Grokbot 时，指定插件所在目录或将其软链接至插件目录：
-
-```bash
-# 复制或链接至 Grokbot 插件目录
-mkdir -p ~/.grok/plugins
-ln -s /path/to/tushare ~/.grok/plugins/tushare
-```
-
-#### 方式 B：配置 `mcp.json`
-在 Grokbot 或客户端的 MCP 配置中注册服务：
+从 Grok Bot 插件市场安装即可；也可以在 MCP 配置中手动注册服务：
 
 ```json
 {
