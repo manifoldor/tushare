@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tushare",
+  "displayName": "TuShare A股行情与金融数据查询",
+  "version": "1.0.0",
+  "description": "基于 TuShare (TuShare Pro) 接口的 A 股股票价格查询、行情分析与上市公司资料 Grokbot 插件，支持 A 股实时股价、五档买卖盘口、历史 K 线、分时走势、大盘指数、公司高管与主营业务、交易日历等查询。",
+  "author": "ethan",
+  "license": "MIT",
+  "keywords": [
+    "tushare",
+    "tushare-pro",
+    "a-share",
+    "stock",
+    "stock-price",
+    "finance",
+    "kline",
+    "grokbot",
+    "mcp"
+  ],
+  "suggestedPrompts": [
+    "查询贵州茅台(600519)的实时股价与五档买卖盘口",
+    "查看宁德时代(300750)最近30个交易日的日K线走势与涨跌幅",
+    "获取上证指数、深证成指与创业板指的大盘最新行情",
+    "查询中芯国际(688981)的公司基本资料与主营业务",
+    "查询本周 A 股交易日历与休市安排"
+  ]
+}
